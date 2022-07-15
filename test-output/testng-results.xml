@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="13688" started-at="2022-07-15T11:04:59 IST" finished-at="2022-07-15T11:05:13 IST">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="13688" started-at="2022-07-15T11:04:59 IST" finished-at="2022-07-15T11:05:13 IST">
+      <class name="com.saucedemo.testcases.LoginTest">
+        <test-method status="PASS" signature="setUpSuite()[pri:0, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="setUpSuite" is-config="true" duration-ms="2585" started-at="2022-07-15T11:04:56 IST" finished-at="2022-07-15T11:04:59 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpSuite -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="setUp" is-config="true" duration-ms="8905" started-at="2022-07-15T11:04:59 IST" finished-at="2022-07-15T11:05:08 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="loginApp()[pri:1, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="loginApp" duration-ms="808" started-at="2022-07-15T11:05:08 IST" finished-at="2022-07-15T11:05:09 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginApp -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="tearDownMethod" is-config="true" duration-ms="4" started-at="2022-07-15T11:05:09 IST" finished-at="2022-07-15T11:05:09 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginApp status=SUCCESS method=LoginTest.loginApp()[pri:1, instance:com.saucedemo.testcases.LoginTest@396e2f39] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="verifyCheckout()[pri:2, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="verifyCheckout" duration-ms="3849" started-at="2022-07-15T11:05:09 IST" finished-at="2022-07-15T11:05:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCheckout -->
+        <test-method status="PASS" signature="tearDownMethod(org.testng.ITestResult)[pri:0, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="tearDownMethod" is-config="true" duration-ms="1" started-at="2022-07-15T11:05:13 IST" finished-at="2022-07-15T11:05:13 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyCheckout status=SUCCESS method=LoginTest.verifyCheckout()[pri:2, instance:com.saucedemo.testcases.LoginTest@396e2f39] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.saucedemo.testcases.LoginTest@396e2f39]" name="tearDown" is-config="true" duration-ms="0" started-at="2022-07-15T11:05:13 IST" finished-at="2022-07-15T11:05:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.saucedemo.testcases.LoginTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
