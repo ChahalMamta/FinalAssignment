@@ -40,23 +40,26 @@ public class LoginTest extends BaseClass {
 		
 		if(productPage.getRemoveCount()>=1) 
 			productPage.resetAppState();
+		
 		productPage.addToCart("Sauce Labs Bike Light");
 		productPage.addToCart("Sauce Labs Fleece Jacket");
 		productPage.addToCart("Sauce Labs Onesie");
+		
 		yourCart = productPage.navigateToCart();
 		yourCart.removeSecondElement();
+		
 		yourInformation = yourCart.checkout();
 		yourInformation.fillDetails(excel.getStringData("Login", 4, 0), excel.getStringData("Login", 5, 0), excel.getStringData("Login", 6, 0));
 		checkoutOverview = yourInformation.continueCheckout();	
+		
 		Assert.assertEquals(checkoutOverview.getPaymentInformation(), "SauceCard #31337");
 		Assert.assertEquals(checkoutOverview.getTotal(), checkoutOverview.totalPrice());
+		
 		checkoutComplete = checkoutOverview.finishCheckout();
+		
 		Assert.assertEquals(checkoutComplete.getThankyouNote(), "THANK YOU FOR YOUR ORDER");
-
-		Assert.assertEquals(checkoutComplete.getFinalNote(),
-				"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
-
-		Assert.assertTrue(checkoutComplete.getImage(), "No image present");
+		Assert.assertEquals(checkoutComplete.getFinalNote(),"Your order has been dispatched, and will arrive just as fast as the pony can get there!");
+         	Assert.assertTrue(checkoutComplete.getImage(), "No image present");
 	}
 
 }
