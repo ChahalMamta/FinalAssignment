@@ -24,8 +24,7 @@ public class YourCart {
 	
 	@FindBy(id = "checkout")
 	protected WebElement checkout;
-	
-	
+		
 	public void removeSecondElement() {
 		removeSecond.click();
 	}
