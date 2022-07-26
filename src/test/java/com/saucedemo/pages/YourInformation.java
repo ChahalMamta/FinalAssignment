@@ -35,7 +35,6 @@ public class YourInformation {
 		firstName.sendKeys(fname);
 		lastName.sendKeys(lname);
 		postalCd.sendKeys(postalCode.replace("\"", ""));
-
 	}
 
 	public CheckoutOverview continueCheckout() {
