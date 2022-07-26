@@ -43,16 +43,10 @@ public class CheckoutOverview {
 
 	public String getTotal() {
 		String uitotal = total.getText().split(" ")[1].replace("$", "").trim();
-		System.out.println(uitotal);
 		return uitotal;
-//		
-//		double uitotal = Double.parseDouble(total.getText().split(" ")[1].replace("$", "").trim());
-//		System.out.println(uitotal);
-//		return uitotal;
 	}
 
 	public String getPaymentInformation() {
-		System.out.println(paymentInformation.getText());
 		return paymentInformation.getText();
 	}
 
@@ -63,15 +57,10 @@ public class CheckoutOverview {
 		final DecimalFormat df = new DecimalFormat("0.00");
 
 		for (WebElement inputElement : price) {
-			// System.out.println(inputElement.getText());
 			sum = sum + Double.parseDouble(inputElement.getText().replace("$", ""));
-
 		}
-		// System.out.println(df.format(sum));
 
 		tax = (sum * 8) / 100;
-
-		// System.out.println(df.format(tax));
 		totalPrice = sum + tax;
 
 		return df.format(totalPrice);
