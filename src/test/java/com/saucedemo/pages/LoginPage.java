@@ -11,8 +11,7 @@ public class LoginPage {
 	public LoginPage(WebDriver ldriver) {
 		this.driver = ldriver;
 		PageFactory.initElements(driver, this);
-		
-		System.out.println(driver.getTitle());
+
 		if (!driver.getTitle().equals("Swag Labs"))
 			throw new AssertionError("Not on the login page");
 	}
@@ -43,8 +42,6 @@ public class LoginPage {
 		passwrd.clear();
 		passwrd.sendKeys(AppPassword);
 		loginBtn.submit();
-
-
 	}
 
 }
