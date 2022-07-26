@@ -59,14 +59,10 @@ public class ProductsPage {
 
 	public void addToCart(String productName) {
 		updateLocator(driver, productName.toLowerCase().replace(" ", "-")).click();
-		;
-		// addElement.click();
-
 	}
 
 	public WebElement updateLocator(WebDriver driver, String text) {
 		return driver.findElement(By.id(String.format(addElement.toString(), text)));
 	}
-
-	// Assert.assertEquals(ProductsPagelogo.getText(), "Products")
+	
 }
