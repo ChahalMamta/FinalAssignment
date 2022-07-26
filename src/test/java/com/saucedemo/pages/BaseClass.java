@@ -40,8 +40,6 @@ public class BaseClass {
 	@AfterMethod
 	public void tearDownMethod(ITestResult result) throws IOException {
 		if (result.getStatus() == ITestResult.FAILURE) {
-
-			// To capture screenshot if test fails
 			Helper.captureScreenshot(driver, result.getName());
 		}
 	}
