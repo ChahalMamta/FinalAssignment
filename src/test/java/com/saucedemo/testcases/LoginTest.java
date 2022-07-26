@@ -23,13 +23,11 @@ public class LoginTest extends BaseClass {
 	@Test(priority = 1)
 	public void loginApp() throws InterruptedException {
 
-		loginPage = new LoginPage(driver); // PageFactory.initElements(driver, LoginPage.class);
+		loginPage = new LoginPage(driver); 
 
 		loginPage.InvalidLoginToApp(excel.getStringData("Login", 1, 0), excel.getStringData("Login", 1, 1));
 
-		Assert.assertEquals(driver.findElement(By.xpath("//div[@class= 'error-message-container error']")).getText(),
-				"Epic sadface: Sorry, this user has been locked out.");
-
+		Assert.assertEquals(loginPage.getErrorMsg(),"Epic sadface: Sorry, this user has been locked out.");
 	}
 
 	@Test(priority = 2)
