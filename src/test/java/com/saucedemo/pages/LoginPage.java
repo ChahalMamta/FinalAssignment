@@ -24,6 +24,9 @@ public class LoginPage {
 
 	@FindBy(id = "login-button")
 	protected WebElement loginBtn;
+	
+	@FindBy(xpath = "//div[@class= 'error-message-container error']")
+	protected WebElement errorMsg;
 
 	public ProductsPage loginToApp(String AppUsername, String AppPassword) throws InterruptedException {
 		username.clear();
@@ -33,7 +36,6 @@ public class LoginPage {
 		loginBtn.submit();
 		
 		return new ProductsPage(driver);
-
 	}
 	
 	public void InvalidLoginToApp(String AppUsername, String AppPassword) throws InterruptedException {
@@ -42,6 +44,10 @@ public class LoginPage {
 		passwrd.clear();
 		passwrd.sendKeys(AppPassword);
 		loginBtn.submit();
+	}
+	
+	public String getErrorMsg() {
+		return errorMsg.getText();
 	}
 
 }
