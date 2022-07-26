@@ -28,55 +28,52 @@ public class App {
             String numberArray[] = numberToString.split("");
             int a = Integer.parseInt(numberArray[0]);
             if (a < 1) {
-                System.out.println("incorrect first digit");
+                System.out.println("Incorrect first digit");
             } else if (a == 9) {
                 System.out.println("Non- residents");
             }
 
             String yearOfBirth=numberArray[1]+numberArray[2];
-            System.out.println("year : " +yearOfBirth );
 
-            if(Integer.parseInt(numberArray[3]) >1 )//&& ) {
-                System.out.println("Invalid month");
+            if(Integer.parseInt(numberArray[3]) >1 ) ) {
+                System.out.println("Please enter valid month");
             else if (Integer.parseInt(numberArray[3])==1 && Integer.parseInt(numberArray[4])>2){
-                System.out.println("invalid month");
+                System.out.println("Please enter valid month");
             }
             else if (Integer.parseInt(numberArray[3])==0 && Integer.parseInt(numberArray[4])==0){
-                System.out.println("invalid month");
+                System.out.println("Please enter valid month");
             }
 
             int month = Integer.valueOf(numberArray[3] + numberArray[4]);
 
-            System.out.println("Month : " + month);
             int f = Integer.parseInt(numberArray[5]);
             if (f > 3) {
-                System.out.println("Invalid date");
+                System.out.println("Please enter valid date");
             }
 
             int g = Integer.parseInt(numberArray[6]);
             if (f == 0 && g == 0) {
-                System.out.println("Invalid date");
+                System.out.println("Please enter valid date");
             } else if (f == 3 && g > 1) {
-                System.out.println("Invalid date");
+                System.out.println("Please enter valid date");
             } else if ((f == 3 && g > 0) && (month == 04 || month == 06 || month == 11)) {
-                System.out.println("Invalid date");
+                System.out.println("Please enter valid date");
             } else if (month == 02 && f == 2 && g > 9) {
-                System.out.println("Invalid date");
+                System.out.println("Please eneter valid date");
             }
             int fg = Integer.valueOf(String.valueOf(f) + String.valueOf(g));
 
-            System.out.println("Date : " + fg);
             int h = Integer.parseInt(numberArray[7]);
             if (h > 5) {
-                System.out.println("Invalid Code");
+                System.out.println("Please enter valid Code");
             }
+                
             int j = Integer.parseInt(numberArray[8]);
             if (h == 5 && j > 2) {
-                System.out.println("Invalid Code");
+                System.out.println("Please enter valid Code");
             }
+                
             int hj = Integer.valueOf(String.valueOf(h) + String.valueOf(j));
-            System.out.println("Area Code : " + hj);
-            System.out.println("Date : " + fg);
         } else {
             System.out.println("Please enter 9 digit number");
 
