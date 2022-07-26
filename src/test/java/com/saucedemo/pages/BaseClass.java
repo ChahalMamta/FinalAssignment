@@ -21,7 +21,6 @@ public class BaseClass {
 
 	@BeforeSuite
 	public void setUpSuite() {
-
 		excel = new ExcelDataProvider();
 		config = new ConfigDataProvider();
 
