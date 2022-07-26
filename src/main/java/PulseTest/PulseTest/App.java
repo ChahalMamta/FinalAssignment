@@ -14,20 +14,13 @@ public class App {
 
         int ranNum =generateRanNum();
 
-        System.out.println("Random digit : " + ranNum);
-
         long twl = Long.valueOf(String.valueOf(number) + String.valueOf(ranNum));
-        System.out.println(twl);
 
         String m = String.valueOf(twl);
-        System.out.println(m);
 
         sum = getSum(m);
-        System.out.println("sum :" + sum);
 
         long fnum = Long.valueOf(String.valueOf(twl) + String.valueOf(getCtrlNum(sum)));
-
-        System.out.println("13 digit number is : " + fnum);
     }
 
     public static void validateUserInput(String numberToString){
